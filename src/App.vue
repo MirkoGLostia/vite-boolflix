@@ -8,9 +8,11 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+  <headerApp />
+</template>
 
 <style lang="scss" scoped>
-@use './styles/partials/variables';
-@use './styles/general.scss';
+@use './styles/partials/variables' as *;
+@use './styles/general.scss' as *;
 </style>
