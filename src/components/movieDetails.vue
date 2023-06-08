@@ -11,6 +11,10 @@ export default {
     <section>
         <div>
             <span>
+                {{ details.title }}
+            </span>
+            <br>
+            <span>
                 {{ details.original_title }}
             </span>
             <br>

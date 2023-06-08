@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+import { store } from './../store';
 import movieDetails from './movieDetails.vue'
 
 export default {

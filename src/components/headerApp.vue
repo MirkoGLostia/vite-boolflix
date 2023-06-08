@@ -1,17 +1,24 @@
 <script>
+import { store } from './../store';
+
 export default {
     name: 'headerApp',
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
     <section>
-        <div>
-            <input type="text" placeholder="search film">
-            <button>
+        <form>
+            <input type="text" placeholder="search film" id="searchBarFilm" v-model="store.searchText">
+            <button type="submit" @click.prevent="$emit('startSearch')">
                 search
             </button>
-        </div>
+        </form>
     </section>
 </template>
 

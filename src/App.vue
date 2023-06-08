@@ -16,7 +16,14 @@ export default {
   },
   methods: {
     getFilmInfo() {
-      axios.get(store.apiURL)
+
+      let myUrl = store.apiURL;
+
+      if (store.searchText !== '') {
+        myUrl += `query=${store.searchText}`
+      }
+
+      axios.get(myUrl)
         .then(res => {
           store.filmData = res.data.results;
           console.log(store.filmData);
@@ -33,7 +40,7 @@ export default {
 </script>
 
 <template>
-  <headerApp />
+  <headerApp @startSearch="getFilmInfo" />
 
   <mainFilmShow />
 </template>
