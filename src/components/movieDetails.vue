@@ -20,13 +20,19 @@ export default {
             <span>
                 {{ details.original_title }}
                 {{ details.original_name }}
-            </span>
-            <br>
-            <!-- language -->
+        </span>
+        <br>
+        <!-- language 1 -->
             <span>
                 {{ details.original_language }}
                 <img :src="`/img/${details.original_language}.png`" alt="flag">
             </span>
+
+            <!-- language 2
+                <span>
+                    <img :src="`/img/${details.original_language}.png`" :alt="`${details.original_language}`">
+                </span> -->
+
             <br>
             <!-- vote -->
             <span>
