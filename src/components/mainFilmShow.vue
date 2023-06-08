@@ -1,11 +1,13 @@
 <script>
 import { store } from './../store';
 import movieDetails from './movieDetails.vue'
+import posterImage from './posterImage.vue';
 
 export default {
     name: 'mainFilmShow',
     components: {
         movieDetails,
+        posterImage,
     },
     data() {
         return {
@@ -19,11 +21,13 @@ export default {
     <section>
         <h2>MOVIES</h2>
         <div v-for="video in store.movieData" :key="video.id">
+            <posterImage :details="video" />
             <movieDetails :details="video" />
         </div>
 
         <h2>TV SERIES</h2>
         <div v-for="video in store.seriesData" :key="video.id">
+            <posterImage :details="video" />
             <movieDetails :details="video" />
         </div>
     </section>

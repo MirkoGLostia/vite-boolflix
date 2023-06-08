@@ -20,7 +20,7 @@ export default {
             <span>
                 {{ details.original_title }}
                 {{ details.original_name }}
-        </span>
+            </span>
         <br>
         <!-- language 1 -->
             <span>
@@ -28,10 +28,10 @@ export default {
                 <img :src="`/img/${details.original_language}.png`" alt="flag">
             </span>
 
-            <!-- language 2
-                <span>
-                    <img :src="`/img/${details.original_language}.png`" :alt="`${details.original_language}`">
-                </span> -->
+            <!-- language 2 -->
+            <!-- <span>
+                        <img :src="`/img/${details.original_language}.png`" :alt="`${details.original_language}`">
+                    </span> -->
 
             <br>
             <!-- vote -->
