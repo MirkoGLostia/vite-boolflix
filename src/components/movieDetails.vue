@@ -12,10 +12,12 @@ export default {
         <div>
             <span>
                 {{ details.title }}
+                {{ details.name }}
             </span>
             <br>
             <span>
                 {{ details.original_title }}
+                {{ details.original_name }}
             </span>
             <br>
             <span>

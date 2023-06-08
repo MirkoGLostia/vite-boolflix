@@ -17,8 +17,14 @@ export default {
 
 <template>
     <section>
-        <div v-for="element in store.filmData" :key="element.id">
-            <movieDetails :details="element" />
+        <h2>MOVIES</h2>
+        <div v-for="video in store.movieData" :key="video.id">
+            <movieDetails :details="video" />
+        </div>
+
+        <h2>TV SERIES</h2>
+        <div v-for="video in store.seriesData" :key="video.id">
+            <movieDetails :details="video" />
         </div>
     </section>
 </template>

@@ -15,18 +15,39 @@ export default {
     }
   },
   methods: {
-    getFilmInfo() {
+    getVideoInfo() {
+      // movie search
+      let myMovieUrl = store.apiURLMovie;
 
-      let myUrl = store.apiURL;
+      // series search
+      let mySeriesURL = store.apiURLTv;
+
+
 
       if (store.searchText !== '') {
-        myUrl += `query=${store.searchText}`
+        // movie
+        myMovieUrl += `query=${store.searchText}`
+
+        //series
+        mySeriesURL += `query=${store.searchText}`
       }
 
-      axios.get(myUrl)
+
+      // movie call
+      axios.get(myMovieUrl)
         .then(res => {
-          store.filmData = res.data.results;
-          console.log(store.filmData);
+          store.movieData = res.data.results;
+          console.log(store.movieData);
+        })
+        .catch(err => {
+          console.log(err);
+        })
+
+      // series call
+      axios.get(mySeriesURL)
+        .then(res => {
+          store.seriesData = res.data.results;
+          console.log(store.seriesData);
         })
         .catch(err => {
           console.log(err);
@@ -34,13 +55,13 @@ export default {
     }
   },
   created() {
-    this.getFilmInfo();
+    this.getVideoInfo();
   }
 }
 </script>
 
 <template>
-  <headerApp @startSearch="getFilmInfo" />
+  <headerApp @startSearch="getVideoInfo" />
 
   <mainFilmShow />
 </template>
