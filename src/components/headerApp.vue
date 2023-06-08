@@ -6,9 +6,12 @@ export default {
 
 <template>
     <section>
-        <span>
-            ciao di prova
-        </span>
+        <div>
+            <input type="text" placeholder="search film">
+            <button>
+                search
+            </button>
+        </div>
     </section>
 </template>
 
