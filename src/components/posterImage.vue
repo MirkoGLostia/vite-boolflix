@@ -16,8 +16,11 @@ export default {
 
 <template>
     <section>
-        <div>
+        <div v-if="details.poster_path !== null">
             <img :src="`${store.startLinkPoster}${details.poster_path}`" alt="poster not found">
+        </div>
+        <div v-else>
+            non poster
         </div>
     </section>
 </template>
