@@ -37,7 +37,6 @@ export default {
       axios.get(myMovieUrl)
         .then(res => {
           store.movieData = res.data.results;
-          console.log(store.movieData);
         })
         .catch(err => {
           console.log(err);
@@ -47,7 +46,6 @@ export default {
       axios.get(mySeriesURL)
         .then(res => {
           store.seriesData = res.data.results;
-          console.log(store.seriesData);
         })
         .catch(err => {
           console.log(err);
