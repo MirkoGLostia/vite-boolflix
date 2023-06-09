@@ -6,5 +6,12 @@ export const store = reactive({
     startLinkPoster: 'https://image.tmdb.org/t/p/w342',
     movieData: [],
     seriesData: [],
-    searchText: ''
+    searchText: '',
+    flagImg: [
+        "en",
+        "fr",
+        "it",
+        "ja",
+        "us"
+    ]
 })
