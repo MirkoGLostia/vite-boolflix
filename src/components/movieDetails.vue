@@ -20,10 +20,12 @@ export default {
             <!-- movie -->
             <div v-if="details.title">
                 <span>
+                    <h4>Titolo: </h4>
                     {{ details.title }}
                 </span>
                 <br>
                 <span>
+                    <h4>Titolo originale: </h4>
                     {{ details.original_title }}
                 </span>
             </div>
@@ -31,18 +33,20 @@ export default {
             <!-- series -->
             <div v-else>
                 <span>
+                    <h4>Titolo: </h4>
                     {{ details.name }}
                 </span>
                 <br>
                 <span>
+                    <h4>Titolo originale: </h4>
                     {{ details.original_name }}
                 </span>
             </div>
 
             <!-- language -->
             <div>
+                <h4>Lingua: </h4>
                 <span v-if="store.flagImg.includes(details.original_language)">
-                    {{ details.original_language }}
                     <img :src="`/img/${details.original_language}.png`" alt="nation of the language">
                 </span>
                 <span v-else>
@@ -52,8 +56,8 @@ export default {
 
             <!-- vote -->
             <div>
-                <span> {{ Math.ceil(details.vote_average / 2) }} of 5 stars </span>
-                <br>
+                <h4>Voto: </h4>
+                <!-- <span> {{ Math.ceil(details.vote_average / 2) }} of 5 stars </span> <br> -->
 
                 <span v-if="Math.ceil(details.vote_average / 2) === 5">
                     <img src="/img/full-star.png" alt="full star">
@@ -106,6 +110,7 @@ export default {
 
             <!-- overview -->
             <div>
+                <h4>Overview: </h4>
                 <p>
                     {{ details.overview }}
                 </p>
@@ -114,11 +119,12 @@ export default {
     </section>
 </template>
   
-<style scoped>
+<style lang="scss" scoped>
 section {
+    border: 1px solid white;
     width: 345px;
     height: 515px;
-    background-color: black;
+    background-color: rgb(19, 10, 141);
     color: white;
     padding: 10px;
     position: absolute;
@@ -127,5 +133,10 @@ section {
     z-index: 5;
     overflow: hidden;
     overflow-y: auto;
+
+    h4 {
+        margin-bottom: 3px;
+        margin-top: 5px;
+    }
 }
 </style>
