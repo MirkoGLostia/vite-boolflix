@@ -21,17 +21,27 @@ export default {
     <section id="main-container-sections">
         <h2>MOVIES</h2>
         <section>
-            <div v-for="video in store.movieData" :key="video.id">
-                <posterImage :details="video" />
-                <movieDetails :details="video" />
+            <div v-for="video in store.movieData" :key="video.id" class="card-container">
+                <div class="image">
+                    <posterImage :details="video" />
+                    <div class="info">
+                        <movieDetails :details="video" />
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <h2>TV SERIES</h2>
         <section>
-            <div v-for="video in store.seriesData" :key="video.id">
-                <posterImage :details="video" />
-                <movieDetails :details="video" />
+            <div v-for="video in store.seriesData" :key="video.id" class="card-container">
+                <div class="image">
+                    <posterImage :details="video" />
+                </div>
+
+                <div class="info">
+                    <movieDetails :details="video" />
+                </div>
             </div>
         </section>
     </section>
@@ -56,10 +66,21 @@ export default {
         flex-wrap: wrap;
         padding: 0 auto;
 
-        div {
+        .card-container {
             width: 340px;
+            height: 500px;
             margin: 50px;
+            position: relative;
+
+            .info {
+                display: none;
+            }
+
+            .image:hover .info {
+                display: block;
+            }
         }
+
     }
 }
 </style>

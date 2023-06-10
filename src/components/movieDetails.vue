@@ -114,4 +114,16 @@ export default {
     </section>
 </template>
   
-<style scoped></style>
+<style scoped>
+section {
+    width: 345px;
+    height: 515px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+</style>

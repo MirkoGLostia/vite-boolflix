@@ -25,4 +25,12 @@ export default {
     </section>
 </template>
   
-<style scoped></style>
+<style lang="scss" scoped>
+section {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+</style>
