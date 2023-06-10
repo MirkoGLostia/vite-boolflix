@@ -50,6 +50,9 @@ export default {
         .catch(err => {
           console.log(err);
         })
+
+      // reset
+      store.searchText = ''
     }
   },
   created() {
@@ -64,7 +67,7 @@ export default {
   <mainFilmShow />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use './styles/partials/variables' as *;
-@use './styles/general.scss' as *;
+@use './styles/general.scss';
 </style>

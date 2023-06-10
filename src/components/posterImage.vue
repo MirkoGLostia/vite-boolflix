@@ -17,16 +17,12 @@ export default {
 <template>
     <section>
         <div v-if="details.poster_path !== null">
-            <img :src="`${store.startLinkPoster}${details.poster_path}`" alt="poster not found">
+            <img :src="`${store.startLinkPoster}${details.poster_path}`" alt="poster of video">
         </div>
         <div v-else>
-            non poster
+            poster not found
         </div>
     </section>
 </template>
   
-<style scoped>
-section {
-    padding: 20px;
-}
-</style>
+<style scoped></style>

@@ -38,77 +38,80 @@ export default {
                     {{ details.original_name }}
                 </span>
             </div>
-            <br>
-            <!-- language 1 -->
-            <span v-if="store.flagImg.includes(details.original_language)">
-                {{ details.original_language }}
-                <img :src="`/img/${details.original_language}.png`" alt="nation of the language">
-            </span>
-            <span v-else>
-                {{ details.original_language }} flag
-            </span>
 
-            <!-- language 2 -->
-            <!-- <span> <img :src="`/img/${details.original_language}.png`" :alt="`${details.original_language}`"> </span> -->
+            <!-- language -->
+            <div>
+                <span v-if="store.flagImg.includes(details.original_language)">
+                    {{ details.original_language }}
+                    <img :src="`/img/${details.original_language}.png`" alt="nation of the language">
+                </span>
+                <span v-else>
+                    {{ details.original_language }} flag
+                </span>
+            </div>
 
-            <br>
             <!-- vote -->
-            <span> {{ Math.ceil(details.vote_average / 2) }} of 5 stars </span>
-            <br>
+            <div>
+                <span> {{ Math.ceil(details.vote_average / 2) }} of 5 stars </span>
+                <br>
 
-            <span v-if="Math.ceil(details.vote_average / 2) === 5">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-            </span>
+                <span v-if="Math.ceil(details.vote_average / 2) === 5">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                </span>
 
-            <span v-else-if="Math.ceil(details.vote_average / 2) === 4">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/empty-star.png" alt="empty star">
-            </span>
+                <span v-else-if="Math.ceil(details.vote_average / 2) === 4">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                </span>
 
-            <span v-else-if="Math.ceil(details.vote_average / 2) === 3">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-            </span>
+                <span v-else-if="Math.ceil(details.vote_average / 2) === 3">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                </span>
 
-            <span v-else-if="Math.ceil(details.vote_average / 2) === 2">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-            </span>
+                <span v-else-if="Math.ceil(details.vote_average / 2) === 2">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                </span>
 
-            <span v-else-if="Math.ceil(details.vote_average / 2) === 1">
-                <img src="/img/full-star.png" alt="full star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-            </span>
+                <span v-else-if="Math.ceil(details.vote_average / 2) === 1">
+                    <img src="/img/full-star.png" alt="full star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                </span>
 
-            <span v-else-if="Math.ceil(details.vote_average / 2) === 0">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-                <img src="/img/empty-star.png" alt="empty star">
-            </span>
+                <span v-else-if="Math.ceil(details.vote_average / 2) === 0">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                    <img src="/img/empty-star.png" alt="empty star">
+                </span>
+            </div>
+
+            <!-- overview -->
+            <div>
+                <p>
+                    {{ details.overview }}
+                </p>
+            </div>
         </div>
     </section>
 </template>
   
-<style scoped>
-section {
-    padding: 50px;
-}
-</style>
+<style scoped></style>
