@@ -28,7 +28,6 @@ export default {
                         <movieDetails :details="video" />
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -37,10 +36,9 @@ export default {
             <div v-for="video in store.seriesData" :key="video.id" class="card-container">
                 <div class="image">
                     <posterImage :details="video" />
-                </div>
-
-                <div class="info">
-                    <movieDetails :details="video" />
+                    <div class="info">
+                        <movieDetails :details="video" />
+                    </div>
                 </div>
             </div>
         </section>

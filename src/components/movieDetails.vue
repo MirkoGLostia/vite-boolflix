@@ -125,5 +125,7 @@ section {
     left: 0;
     top: 0;
     z-index: 5;
+    overflow: hidden;
+    overflow-y: auto;
 }
 </style>
