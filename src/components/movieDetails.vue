@@ -120,10 +120,12 @@ export default {
 </template>
   
 <style lang="scss" scoped>
+@use './../styles/partials/mixins' as *;
+
 section {
+    @include myCardDimension;
+
     border: 1px solid white;
-    width: 345px;
-    height: 515px;
     background-color: rgb(19, 10, 141);
     color: white;
     padding: 10px;

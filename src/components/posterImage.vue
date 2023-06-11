@@ -20,17 +20,30 @@ export default {
             <img :src="`${store.startLinkPoster}${details.poster_path}`" alt="poster of video">
         </div>
         <div v-else>
-            poster not found
+            <span>
+                poster not found
+            </span>
         </div>
     </section>
 </template>
   
 <style lang="scss" scoped>
+@use './../styles/partials/mixins' as *;
+
 section {
-    height: 100%;
+    @include myCardDimension;
+
+    background-color: black;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
+
+    // rules for the text
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
 }
 </style>
